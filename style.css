@@ -1,0 +1,66 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Time New Roman',cursive;
+}
+body{
+    background:url(/wp7051637-space-8k-wallpapers.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+
+}
+section{
+    background: blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    transform-style: preserve-3d;
+}
+.earth{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 300px;
+    height: 300px;
+    background: url(/earth.png);
+    background-size: cover;
+    background-repeat: repeat-x;
+    border-radius: 50%;
+    box-shadow: inset 0 0 20px rgba(0,0,0,0.1),0 0 50px rgb(80, 180, 226);
+    animation: earth 15s linear infinite;
+}
+@keyframes earth{
+    0%{
+        background-position: 0 0;
+    }
+100%{
+    background-position: -725px 0;
+}
+}
+.a{
+    display: flex;
+    margin: 10px;
+    padding: 300px;
+    margin-right: 90%;
+}
+.circle{
+    padding: 100px;
+    transform-style: preserve-3d;
+    animation: rocket 5s linear infinite;
+    
+}
+
+@keyframes rocket{
+    0%{
+        
+        transform: perspective(1000px) rotateX(360deg) rotateY(180deg) translateZ(200px);
+    }
+    100%{
+        transform: perspective(1000px) rotateX(0deg) rotateY(0deg) translateZ(-200px);
+    }
+}
+ 
